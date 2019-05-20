@@ -18,7 +18,8 @@ class GameViewController: UIViewController {
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
+                let gameScene = scene as! GameScene
+                gameScene.controller = self
                 scene.scaleMode = .aspectFill
                 
                 // Present the scene
@@ -30,8 +31,12 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+    
     }
-
+    func gameOver() {
+        self.dismiss(animated: true, completion: nil)
+    }
     override var shouldAutorotate: Bool {
         return true
     }
