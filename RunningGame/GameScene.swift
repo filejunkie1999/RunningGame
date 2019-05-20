@@ -11,9 +11,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     var girl = Girl()
-    var realBackground = RealBackaground()
+    var realBackground = RealBackground()
     var grass = Grass()
     var cactus = Cactus()
+    var time = 0
     var controller : GameViewController?
     override func didMove(to view: SKView) {
         self.addChild(girl.sprite)
@@ -21,6 +22,7 @@ class GameScene: SKScene {
         self.addChild(grass.sprite)
         self.addChild(cactus.sprite)
         print("new scene")
+        
         
     }
 
@@ -65,6 +67,7 @@ class GameScene: SKScene {
         }
         grass.move()
         cactus.move()
+    
      
     }
 }

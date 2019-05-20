@@ -19,7 +19,7 @@ class Cactus {
         sprite.position = CGPoint(x: 0, y: 0)
        
         sprite.size = CGSize(width: 80.0, height:60.0)
-        sprite.position = CGPoint(x: 25, y: 230)
+        sprite.position = CGPoint(x: 1525, y: 230)
         phys = SKPhysicsBody(rectangleOf: sprite.size, center: sprite.anchorPoint)
         phys.isDynamic = false
         phys.affectedByGravity = true

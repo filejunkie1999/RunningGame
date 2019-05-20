@@ -19,8 +19,8 @@
 		0C222957225FDB49002C5CAC /* RunningGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C222956225FDB49002C5CAC /* RunningGameUITests.swift */; };
 		0C222967225FE181002C5CAC /* Girl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C222966225FE181002C5CAC /* Girl.swift */; };
 		0C3C3E782284C4E7008D1D98 /* grass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C3E772284C4E7008D1D98 /* grass.swift */; };
+		0C652DF6229341E9000DB7A4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C652DF5229341E9000DB7A4 /* StartViewController.swift */; };
 		0C679A82228CAF9C00944FFC /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C679A81228CAF9C00944FFC /* Cactus.swift */; };
-		0C68D41C227CDE8D0053C5F9 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C68D41B227CDE8D0053C5F9 /* File.swift */; };
 		0CA9A40D227A230600554725 /* PinkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A40C227A230600554725 /* PinkBackground.swift */; };
 		0CE2A6AB228F75E60039E088 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE2A6AA228F75E60039E088 /* Timer.swift */; };
 /* End PBXBuildFile section */
@@ -61,8 +61,8 @@
 		0C222958225FDB49002C5CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C222966225FE181002C5CAC /* Girl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Girl.swift; sourceTree = "<group>"; };
 		0C3C3E772284C4E7008D1D98 /* grass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grass.swift; sourceTree = "<group>"; };
+		0C652DF5229341E9000DB7A4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0C679A81228CAF9C00944FFC /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
-		0C68D41B227CDE8D0053C5F9 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		0CA9A40C227A230600554725 /* PinkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkBackground.swift; sourceTree = "<group>"; };
 		0CE2A6AA228F75E60039E088 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +115,7 @@
 		0C22292F225FDB48002C5CAC /* RunningGame */ = {
 			isa = PBXGroup;
 			children = (
+				0C652DF5229341E9000DB7A4 /* StartViewController.swift */,
 				0C222930225FDB48002C5CAC /* AppDelegate.swift */,
 				0C222934225FDB48002C5CAC /* Actions.sks */,
 				0C222932225FDB48002C5CAC /* GameScene.sks */,
@@ -123,7 +124,6 @@
 				0C222938225FDB48002C5CAC /* GameViewController.swift */,
 				0C222966225FE181002C5CAC /* Girl.swift */,
 				0C679A81228CAF9C00944FFC /* Cactus.swift */,
-				0C68D41B227CDE8D0053C5F9 /* File.swift */,
 				0CA9A40C227A230600554725 /* PinkBackground.swift */,
 				0C22293A225FDB48002C5CAC /* Main.storyboard */,
 				0CE2A6AA228F75E60039E088 /* Timer.swift */,
@@ -220,6 +220,7 @@
 				TargetAttributes = {
 					0C22292C225FDB48002C5CAC = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					0C222946225FDB49002C5CAC = {
 						CreatedOnToolsVersion = 10.0;
@@ -286,11 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C222937225FDB48002C5CAC /* GameScene.swift in Sources */,
-				0C68D41C227CDE8D0053C5F9 /* File.swift in Sources */,
 				0C679A82228CAF9C00944FFC /* Cactus.swift in Sources */,
 				0C222939225FDB48002C5CAC /* GameViewController.swift in Sources */,
 				0C222931225FDB48002C5CAC /* AppDelegate.swift in Sources */,
 				0CA9A40D227A230600554725 /* PinkBackground.swift in Sources */,
+				0C652DF6229341E9000DB7A4 /* StartViewController.swift in Sources */,
 				0CE2A6AB228F75E60039E088 /* Timer.swift in Sources */,
 				0C222967225FE181002C5CAC /* Girl.swift in Sources */,
 				0C3C3E782284C4E7008D1D98 /* grass.swift in Sources */,
@@ -468,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RunningGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-019.RunningGame";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RunningGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

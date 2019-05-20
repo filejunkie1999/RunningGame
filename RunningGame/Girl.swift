@@ -17,7 +17,8 @@ class Girl{
     
     init() {
         sprite.position = CGPoint(x: 0,
-            y: 500)
+            y: 10)
+             sprite.size = CGSize(width: 100, height: 200)
         phys =
             SKPhysicsBody(rectangleOf:
                 sprite.size, center:
@@ -25,11 +26,12 @@ class Girl{
     phys?.affectedByGravity = true
     phys?.mass = 5
         sprite.physicsBody = phys
+        
     }
     
     func jump() {
         phys?.velocity = CGVector(dx: 0, dy: 0)
-        phys?.applyImpulse(CGVector(dx: 0, dy: 5000))
+        phys?.applyImpulse(CGVector(dx: 0, dy: 5050))
             print("JUMP")
     }
     

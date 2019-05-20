@@ -11,21 +11,21 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    var gameScene:GameScene?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
-                let gameScene = scene as! GameScene
-                gameScene.controller = self
+                gameScene = scene as! GameScene
+                gameScene!.controller = self
                 scene.scaleMode = .aspectFill
                 
                 // Present the scene
                 view.presentScene(scene)
             }
-            
+       
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
@@ -35,6 +35,10 @@ class GameViewController: UIViewController {
     
     }
     func gameOver() {
+        gameScene!.removeFromParent()
+         if let view = self.view as! SKView? {
+            view.presentScene(nil)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     override var shouldAutorotate: Bool {
